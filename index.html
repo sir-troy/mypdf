@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>MyPDF – Free Online PDF Tools: JPG to PDF, PDF to JPG, Merge, Split & Sign</title>
-  <meta name="description" content="MyPDF is a free, private online PDF toolkit. Convert JPG to PDF, PDF to JPG, merge, split and sign PDFs right in your browser. Your files never leave your device.">
+  <title>MyPDF – Free PDF Tools: PDF to Word, Word to PDF, Excel, PowerPoint, Merge, Compress & Sign</title>
+  <meta name="description" content="Free, private PDF tools that run in your browser: PDF to Word, Word, Excel and PowerPoint to PDF, JPG to PDF, merge, split, compress, organize, page numbers, watermark and sign. Your files never leave your device.">
   <meta name="theme-color" content="#05060f">
   <script>
     (function(){var t=null;try{t=localStorage.getItem('mypdf-theme')}catch(e){}
@@ -40,6 +40,14 @@
       <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
       <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
       <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-word" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 12l1.5 5 2.5-4 2.5 4 1.5-5"/></symbol>
+      <symbol id="i-xls" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14.5h18M9 4v16M15 4v16"/></symbol>
+      <symbol id="i-ppt" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/><path d="M9 8h4a2 2 0 0 1 0 4H9V8z"/></symbol>
+      <symbol id="i-txt" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 12h8M8 15.5h8M8 19h5"/></symbol>
+      <symbol id="i-pages" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="9" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></symbol>
+      <symbol id="i-compress" viewBox="0 0 24 24"><path d="M4 14h6v6"/><path d="M20 10h-6V4"/><path d="M14 10l7-7"/><path d="M3 21l7-7"/></symbol>
+      <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8.5 15.5l7-5"/><path d="M11 19h2"/></symbol>
+      <symbol id="i-rot" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></symbol>
       <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
     </defs>
   </svg>
@@ -53,10 +61,11 @@
         <span class="logo-text">My<b>PDF</b></span>
       </a>
       <nav class="nav">
-        <a href="#jpg-to-pdf">JPG to PDF</a>
-        <a href="#pdf-to-jpg">PDF to JPG</a>
+        <a href="#tools-grid" data-scroll>All tools</a>
+        <a href="#pdf-to-word">PDF to Word</a>
+        <a href="#word-to-pdf">Word to PDF</a>
         <a href="#merge">Merge</a>
-        <a href="#split">Split</a>
+        <a href="#compress">Compress</a>
         <a href="#sign">Sign</a>
       </nav>
       <button class="theme-toggle" id="theme-toggle" aria-label="Switch light/dark theme" title="Switch theme">
@@ -79,7 +88,7 @@
               <span class="line"><span>of your device.</span></span>
             </h1>
             <div class="headline-progress" aria-hidden="true"><span id="headline-bar"></span></div>
-            <p class="hero-sub">Convert, merge, split and sign PDFs with an engine that runs entirely in your browser. Your files are never uploaded, and you don't need an account.</p>
+            <p class="hero-sub">Convert PDFs to and from Word, Excel, PowerPoint and images, then merge, split, compress, number and sign them, with an engine that runs entirely in your browser. Your files are never uploaded, and you don't need an account.</p>
             <div class="cta">
               <a class="btn btn-primary" href="#tools-grid" data-scroll>Launch tools <svg class="ic"><use href="#i-arrow"/></svg></a>
               <a class="btn btn-glass" href="#limits" data-scroll>Read limitations</a>
@@ -99,7 +108,7 @@
 
         <!-- Stats -->
         <div class="stats-grid" id="stats">
-          <div class="stat glass reveal"><span class="stat-label">TOOLS ONLINE</span><b class="stat-num" data-count="5">0</b><span class="stat-foot">Convert · Organize · Sign</span></div>
+          <div class="stat glass reveal"><span class="stat-label">TOOLS ONLINE</span><b class="stat-num" id="tool-count" data-count="5">0</b><span class="stat-foot">Convert · Organize · Edit · Sign</span></div>
           <div class="stat glass reveal"><span class="stat-label">BYTES UPLOADED</span><b class="stat-num" data-count="0">0</b><span class="stat-foot">Everything stays on your device</span></div>
           <div class="stat glass reveal"><span class="stat-label">IMAGE FORMATS IN</span><b class="stat-num" data-count="5" data-suffix="+">0</b><span class="stat-foot">JPG · PNG · WEBP · GIF · BMP</span></div>
           <div class="stat glass reveal"><span class="stat-label">MAX EXPORT</span><b class="stat-num" data-count="216" data-suffix=" dpi">0</b><span class="stat-foot">PDF to image quality</span></div>
@@ -107,18 +116,51 @@
 
         <div class="section-head reveal"><span class="tag">[ 01 ]</span><h2>Choose a module</h2></div>
         <div class="tool-grid" id="tools-grid">
+          <div class="tool-group">Convert to PDF</div>
           <a class="tool-card tilt reveal" href="#jpg-to-pdf" style="--c1:#22d3ee;--c2:#3b82f6">
             <div class="tc-glow"></div>
             <div class="tc-top"><span class="tc-id">MOD_01</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
             <div class="tool-icon"><svg class="ic"><use href="#i-img"/></svg></div>
             <h3>JPG to PDF</h3><p>Combine images into one PDF, with control over page size, orientation and margins.</p>
           </a>
+          <a class="tool-card tilt reveal" href="#word-to-pdf" style="--c1:#3b82f6;--c2:#6366f1">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_06</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-word"/></svg></div>
+            <h3>Word to PDF</h3><p>Turn a .docx document into a PDF, with its text, tables and pictures.</p>
+          </a>
+          <a class="tool-card tilt reveal" href="#excel-to-pdf" style="--c1:#22c55e;--c2:#14b8a6">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_07</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-xls"/></svg></div>
+            <h3>Excel to PDF</h3><p>Turn spreadsheets (.xlsx, .xls, .csv) into neat, printable PDF tables.</p>
+          </a>
+          <a class="tool-card tilt reveal" href="#ppt-to-pdf" style="--c1:#f97316;--c2:#ef4444">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_08</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-ppt"/></svg></div>
+            <h3>PowerPoint to PDF</h3><p>Turn a .pptx presentation into a PDF, one slide per page.</p>
+          </a>
+          <div class="tool-group">Convert from PDF</div>
           <a class="tool-card tilt reveal" href="#pdf-to-jpg" style="--c1:#34d399;--c2:#22d3ee">
             <div class="tc-glow"></div>
             <div class="tc-top"><span class="tc-id">MOD_02</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
             <div class="tool-icon"><svg class="ic"><use href="#i-pic"/></svg></div>
             <h3>PDF to JPG</h3><p>Render every page as a high-resolution JPG or PNG image.</p>
           </a>
+          <a class="tool-card tilt reveal" href="#pdf-to-word" style="--c1:#6366f1;--c2:#3b82f6">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_09</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-word"/></svg></div>
+            <h3>PDF to Word</h3><p>Turn a PDF into an editable .docx file, or a Word file that looks exactly like it.</p>
+          </a>
+          <a class="tool-card tilt reveal" href="#pdf-to-text" style="--c1:#a3e635;--c2:#22c55e">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_10</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-txt"/></svg></div>
+            <h3>PDF to text</h3><p>Pull all the text out of a PDF into a plain .txt file you can copy anywhere.</p>
+          </a>
+          <div class="tool-group">Organize</div>
           <a class="tool-card tilt reveal" href="#merge" style="--c1:#8b5cf6;--c2:#ec4899">
             <div class="tc-glow"></div>
             <div class="tc-top"><span class="tc-id">MOD_03</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
@@ -131,7 +173,26 @@
             <div class="tool-icon"><svg class="ic"><use href="#i-split"/></svg></div>
             <h3>Split PDF</h3><p>Split into single pages or custom ranges, or extract just the pages you need.</p>
           </a>
-          <a class="tool-card tilt wide reveal" href="#sign" style="--c1:#ec4899;--c2:#8b5cf6">
+          <a class="tool-card tilt reveal" href="#organize" style="--c1:#06b6d4;--c2:#8b5cf6">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_11</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-pages"/></svg></div>
+            <h3>Organize pages</h3><p>Rotate, delete and reorder the pages of a PDF.</p>
+          </a>
+          <a class="tool-card tilt reveal" href="#compress" style="--c1:#10b981;--c2:#06b6d4">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_12</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-compress"/></svg></div>
+            <h3>Compress PDF</h3><p>Make scanned and photo-heavy PDFs smaller, with three strength levels.</p>
+          </a>
+          <div class="tool-group">Edit &amp; sign</div>
+          <a class="tool-card tilt reveal" href="#number-watermark" style="--c1:#eab308;--c2:#f97316">
+            <div class="tc-glow"></div>
+            <div class="tc-top"><span class="tc-id">MOD_13</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
+            <div class="tool-icon"><svg class="ic"><use href="#i-stamp"/></svg></div>
+            <h3>Page numbers &amp; watermark</h3><p>Add page numbers and a text watermark like CONFIDENTIAL to every page.</p>
+          </a>
+          <a class="tool-card tilt reveal" href="#sign" style="--c1:#ec4899;--c2:#8b5cf6">
             <div class="tc-glow"></div>
             <div class="tc-top"><span class="tc-id">MOD_05</span><span class="tc-go"><svg class="ic"><use href="#i-arrow"/></svg></span></div>
             <div class="tool-icon"><svg class="ic"><use href="#i-sign"/></svg></div>
@@ -163,12 +224,216 @@
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>File size depends on your device</h4><p>Large files are processed in your device's memory. On phones, keep files under about <b>100 MB</b> or <b>300 pages</b>. Bigger files may be slow or may crash the browser tab.</p></div></div>
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>No password-protected PDFs</h4><p>Encrypted or password-protected PDFs aren't supported. Remove the password first, using an app that has it.</p></div></div>
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Signatures are visual, not certified</h4><p>Sign PDF places an image of your signature. It is <b>not</b> a certified digital signature (PKI / eIDAS), and some legal or government documents require one.</p></div></div>
-          <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Bookmarks and forms may be lost</h4><p>Merge and Split keep the page content, but bookmarks (the outline) are dropped and fillable form fields may stop working.</p></div></div>
+          <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Bookmarks and forms may be lost</h4><p>Merge, Split and Organize keep the page content, but bookmarks (the outline) are dropped and fillable form fields may stop working.</p></div></div>
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Image format support varies by browser</h4><p>iPhone HEIC photos only work in Safari. In other browsers, convert them to JPG first. Animated GIFs use only the first frame.</p></div></div>
-          <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>No OCR, editing or compression (yet)</h4><p>MyPDF can't recognise text in scans, edit existing text or make PDFs smaller.</p></div></div>
+          <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>No OCR or text editing</h4><p>MyPDF can't recognise text in scans or edit the existing text inside a PDF. Compress works by turning pages into pictures, so text in a compressed PDF can't be selected.</p></div></div>
+          <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Office conversions are simplified</h4><p>Word, Excel and PowerPoint files are converted in your browser, not by Microsoft Office. Text, tables and pictures come through, but complex layouts, fonts, charts and effects may look different. Always check the result.</p></div></div>
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Rendering differences</h4><p>PDF to JPG uses a browser renderer. PDFs with unusual fonts or complex graphics may look slightly different from Adobe Acrobat.</p></div></div>
           <div class="limit"><svg class="ic"><use href="#i-warn"/></svg><div><h4>Modern browser required</h4><p>Use a recent version of Chrome, Edge, Firefox or Safari. Internet Explorer isn't supported.</p></div></div>
         </div>
+      </section>
+
+      <!-- PDF TO WORD -->
+      <section id="pdf-to-word" class="view" hidden style="--c1:#6366f1;--c2:#3b82f6">
+        <div class="tool-head"><span class="crumb">MOD_09 // CONVERT</span><h1>PDF to <span class="grad-text">Word</span></h1><p>Turn a PDF into a Word document (.docx).</p></div>
+        <label class="dropzone" id="p2w-drop">
+          <input type="file" id="p2w-input" accept="application/pdf" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select PDF file</div>
+          <div class="dz-sub">or drop a PDF here</div>
+        </label>
+        <div class="options glass" id="p2w-options" hidden>
+          <span class="file-pill" id="p2w-name"></span>
+          <label>Mode
+            <select id="p2w-mode"><option value="text">Editable text</option><option value="image">Exact look (pages as pictures)</option></select>
+          </label>
+          <button class="btn btn-primary" id="p2w-go">Convert to Word</button>
+        </div>
+        <p class="tool-note" id="p2w-note"><b>Editable text</b> gives you text you can change, with headings and paragraphs, but a simpler layout. <b>Exact look</b> keeps every page exactly as it looks, but the text can't be edited.</p>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Editable mode keeps the text, headings and paragraphs, but not columns, tables, pictures or exact positions.</li><li>Scanned PDFs have no real text inside. For those, MyPDF switches to Exact look automatically (it can't read text from images).</li><li>Password-protected PDFs aren't supported.</li><li>Fonts in the Word file may differ from the PDF.</li></ul>
+        </details>
+      </section>
+
+      <!-- WORD TO PDF -->
+      <section id="word-to-pdf" class="view" hidden style="--c1:#3b82f6;--c2:#6366f1">
+        <div class="tool-head"><span class="crumb">MOD_06 // CONVERT</span><h1><span class="grad-text">Word</span> to PDF</h1><p>Turn a Word document (.docx) into a PDF.</p></div>
+        <label class="dropzone" id="w2p-drop">
+          <input type="file" id="w2p-input" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select Word file</div>
+          <div class="dz-sub">or drop a .docx file here</div>
+        </label>
+        <div class="options glass" id="w2p-options" hidden>
+          <span class="file-pill" id="w2p-name"></span>
+          <button class="btn btn-primary" id="w2p-go">Download PDF</button>
+          <button class="btn btn-glass" id="w2p-print">Print / Save as PDF</button>
+        </div>
+        <p class="tool-note"><b>Download PDF</b> works on every device. <b>Print / Save as PDF</b> uses your browser's print window and keeps the text selectable. Choose "Save as PDF" as the printer.</p>
+        <div class="preview-box glass" id="w2p-preview-wrap" hidden><div class="preview-label">Preview</div><div class="office-preview" id="w2p-preview"></div></div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Only .docx files are supported. For old .doc files, open them in Word or Google Docs and save as .docx first.</li><li>Fonts that aren't on your device are replaced with similar ones, so line breaks can shift.</li><li>Download PDF saves each page as a sharp picture, so text in it can't be selected or searched. Use Print / Save as PDF for selectable text.</li><li>Comments, tracked changes, text boxes and some charts or shapes may be left out or look different.</li></ul>
+        </details>
+      </section>
+
+      <!-- EXCEL TO PDF -->
+      <section id="excel-to-pdf" class="view" hidden style="--c1:#22c55e;--c2:#14b8a6">
+        <div class="tool-head"><span class="crumb">MOD_07 // CONVERT</span><h1><span class="grad-text">Excel</span> to PDF</h1><p>Turn a spreadsheet into PDF tables, one sheet after another.</p></div>
+        <label class="dropzone" id="x2p-drop">
+          <input type="file" id="x2p-input" accept=".xlsx,.xls,.xlsm,.csv,.ods" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select spreadsheet</div>
+          <div class="dz-sub">or drop an .xlsx, .xls, .csv or .ods file here</div>
+        </label>
+        <div class="options glass" id="x2p-options" hidden>
+          <span class="file-pill" id="x2p-name"></span>
+          <label>Sheets
+            <select id="x2p-sheet"></select>
+          </label>
+          <label>Orientation
+            <select id="x2p-orient"><option value="auto">Auto</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select>
+          </label>
+          <label>Paper
+            <select id="x2p-paper"><option value="a4">A4</option><option value="letter">US Letter</option></select>
+          </label>
+          <label class="inline"><input type="checkbox" id="x2p-grid" checked> Gridlines</label>
+          <button class="btn btn-primary" id="x2p-go">Download PDF</button>
+          <button class="btn btn-glass" id="x2p-print">Print / Save as PDF</button>
+        </div>
+        <div class="preview-box glass" id="x2p-preview-wrap" hidden><div class="preview-label">Preview</div><div class="office-preview sheet-preview" id="x2p-preview"></div></div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Cell values and formulas' results are kept, but colours, fonts, merged-cell styling, charts and images are not.</li><li>Very wide sheets are shrunk to fit the page width, so the text can get small. Try Landscape.</li><li>Download PDF saves pages as pictures. Use Print / Save as PDF if you need selectable text.</li><li>Password-protected workbooks can't be opened.</li></ul>
+        </details>
+      </section>
+
+      <!-- PPT TO PDF -->
+      <section id="ppt-to-pdf" class="view" hidden style="--c1:#f97316;--c2:#ef4444">
+        <div class="tool-head"><span class="crumb">MOD_08 // CONVERT</span><h1><span class="grad-text">PowerPoint</span> to PDF</h1><p>Turn a presentation (.pptx) into a PDF, one slide per page.</p></div>
+        <label class="dropzone" id="pp2p-drop">
+          <input type="file" id="pp2p-input" accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select presentation</div>
+          <div class="dz-sub">or drop a .pptx file here</div>
+        </label>
+        <div class="options glass" id="pp2p-options" hidden>
+          <span class="file-pill" id="pp2p-name"></span>
+          <button class="btn btn-primary" id="pp2p-go">Convert to PDF</button>
+        </div>
+        <div class="result-bar" id="pp2p-result" hidden><span id="pp2p-count"></span><button class="btn btn-primary" id="pp2p-dl">Download PDF</button></div>
+        <div class="file-grid slide-grid" id="pp2p-slides"></div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Slides are rebuilt in your browser with their text, pictures, backgrounds and basic shapes. Animations, transitions, videos, charts, SmartArt and special effects are not included.</li><li>Fonts that aren't on your device are replaced, so text may wrap differently.</li><li>Only .pptx files are supported. Save old .ppt files as .pptx first.</li><li>Check the preview before you share the PDF. For a perfect copy, export from PowerPoint or Google Slides.</li></ul>
+        </details>
+      </section>
+
+      <!-- PDF TO TEXT -->
+      <section id="pdf-to-text" class="view" hidden style="--c1:#a3e635;--c2:#22c55e">
+        <div class="tool-head"><span class="crumb">MOD_10 // CONVERT</span><h1>PDF to <span class="grad-text">text</span></h1><p>Pull all the text out of a PDF.</p></div>
+        <label class="dropzone" id="p2t-drop">
+          <input type="file" id="p2t-input" accept="application/pdf" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select PDF file</div>
+          <div class="dz-sub">or drop a PDF here</div>
+        </label>
+        <div class="options glass" id="p2t-options" hidden>
+          <span class="file-pill" id="p2t-name"></span>
+          <label class="inline"><input type="checkbox" id="p2t-marks" checked> Mark where each page starts</label>
+          <button class="btn btn-primary" id="p2t-go">Extract text</button>
+        </div>
+        <div class="text-out glass" id="p2t-out" hidden>
+          <div class="text-out-bar"><span id="p2t-stats"></span><span><button class="btn btn-glass btn-sm" id="p2t-copy">Copy</button> <button class="btn btn-primary btn-sm" id="p2t-dl">Download .txt</button></span></div>
+          <textarea id="p2t-text" spellcheck="false" readonly></textarea>
+        </div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Scanned PDFs are pictures of text, so there is no text to extract (MyPDF doesn't do OCR).</li><li>Text in columns or tables may come out in a different order.</li><li>Password-protected PDFs aren't supported.</li></ul>
+        </details>
+      </section>
+
+      <!-- ORGANIZE -->
+      <section id="organize" class="view" hidden style="--c1:#06b6d4;--c2:#8b5cf6">
+        <div class="tool-head"><span class="crumb">MOD_11 // ORGANIZE</span><h1><span class="grad-text">Organize</span> pages</h1><p>Rotate, delete and reorder pages. Drag the cards, or use the arrows on a phone.</p></div>
+        <label class="dropzone" id="org-drop">
+          <input type="file" id="org-input" accept="application/pdf" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select PDF file</div>
+          <div class="dz-sub">or drop a PDF here</div>
+        </label>
+        <div class="options glass" id="org-options" hidden>
+          <span class="file-pill" id="org-name"></span>
+          <button class="btn btn-glass" id="org-rotall">Rotate all ↻</button>
+          <button class="btn btn-glass" id="org-reset">Undo all changes</button>
+          <button class="btn btn-primary" id="org-go">Save PDF</button>
+        </div>
+        <div class="file-grid org-grid" id="org-pages"></div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Very long PDFs take a while to show all page previews, especially on phones.</li><li>Bookmarks (the outline) and links between pages may not work after reordering.</li><li>Password-protected PDFs aren't supported.</li></ul>
+        </details>
+      </section>
+
+      <!-- COMPRESS -->
+      <section id="compress" class="view" hidden style="--c1:#10b981;--c2:#06b6d4">
+        <div class="tool-head"><span class="crumb">MOD_12 // ORGANIZE</span><h1><span class="grad-text">Compress</span> PDF</h1><p>Make a PDF smaller, especially scans and photo-heavy files.</p></div>
+        <label class="dropzone" id="cmp-drop">
+          <input type="file" id="cmp-input" accept="application/pdf" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select PDF file</div>
+          <div class="dz-sub">or drop a PDF here</div>
+        </label>
+        <div class="options glass" id="cmp-options" hidden>
+          <span class="file-pill" id="cmp-name"></span>
+          <label>Strength
+            <select id="cmp-level"><option value="strong">Strong (smallest file)</option><option value="balanced" selected>Balanced</option><option value="light">Light (best quality)</option></select>
+          </label>
+          <button class="btn btn-primary" id="cmp-go">Compress PDF</button>
+        </div>
+        <div class="result-bar" id="cmp-result" hidden><span id="cmp-sizes"></span><button class="btn btn-primary" id="cmp-dl">Download</button></div>
+        <p class="tool-note">Compression turns each page into an optimised picture. That's what makes scans and photo PDFs much smaller.</p>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>After compressing, text can no longer be selected, searched or copied, and links stop working.</li><li>PDFs that are mostly text may not get smaller, and can even get bigger. MyPDF tells you if that happens, so you can keep your original.</li><li>Password-protected PDFs aren't supported.</li></ul>
+        </details>
+      </section>
+
+      <!-- PAGE NUMBERS & WATERMARK -->
+      <section id="number-watermark" class="view" hidden style="--c1:#eab308;--c2:#f97316">
+        <div class="tool-head"><span class="crumb">MOD_13 // EDIT</span><h1>Page numbers &amp; <span class="grad-text">watermark</span></h1><p>Stamp page numbers, a watermark, or both, on every page.</p></div>
+        <label class="dropzone" id="nw-drop">
+          <input type="file" id="nw-input" accept="application/pdf" hidden>
+          <div class="dz-ring"><svg class="ic"><use href="#i-up"/></svg></div>
+          <div class="dz-title">Select PDF file</div>
+          <div class="dz-sub">or drop a PDF here</div>
+        </label>
+        <div class="nw-workspace" id="nw-workspace" hidden>
+          <aside class="sign-panel glass">
+            <span class="file-pill" id="nw-name"></span>
+            <h3><span>01</span> Page numbers</h3>
+            <label class="inline"><input type="checkbox" id="nw-num" checked> Add page numbers</label>
+            <div class="nw-fields" id="nw-num-fields">
+              <label>Position<select id="nw-pos"><option value="bc">Bottom centre</option><option value="br">Bottom right</option><option value="bl">Bottom left</option><option value="tc">Top centre</option><option value="tr">Top right</option><option value="tl">Top left</option></select></label>
+              <label>Format<select id="nw-fmt"><option value="n">1</option><option value="page">Page 1</option><option value="of">Page 1 of 10</option><option value="slash">1 / 10</option></select></label>
+              <label>Start at<input type="number" id="nw-start" value="1" min="0" max="9999"></label>
+              <label>Size<select id="nw-size"><option value="9">Small</option><option value="11" selected>Medium</option><option value="14">Large</option></select></label>
+              <label class="inline"><input type="checkbox" id="nw-skip"> Skip the first page (cover)</label>
+            </div>
+            <h3><span>02</span> Watermark</h3>
+            <label class="inline"><input type="checkbox" id="nw-wm"> Add a watermark</label>
+            <div class="nw-fields" id="nw-wm-fields">
+              <label>Text<input type="text" id="nw-text" value="CONFIDENTIAL" maxlength="40"></label>
+              <label>Style<select id="nw-angle"><option value="diag">Diagonal</option><option value="flat">Straight across</option></select></label>
+              <label>Size<select id="nw-wsize"><option value="0.4">Small</option><option value="0.6" selected>Medium</option><option value="0.8">Large</option></select></label>
+              <label>Colour<select id="nw-color"><option value="0.5,0.5,0.5">Grey</option><option value="0.85,0.12,0.12">Red</option><option value="0.15,0.35,0.85">Blue</option></select></label>
+              <label>Opacity<select id="nw-op"><option value="0.12">Faint</option><option value="0.22" selected>Medium</option><option value="0.4">Strong</option></select></label>
+            </div>
+            <h3><span>03</span> Export</h3>
+            <button class="btn btn-primary full" id="nw-go">Apply &amp; download</button>
+          </aside>
+          <div class="sign-viewer glass">
+            <div class="pager"><span>Preview · page 1</span></div>
+            <div class="page-stage"><canvas id="nw-canvas"></canvas></div>
+          </div>
+        </div>
+        <details class="tool-limits glass"><summary><svg class="ic"><use href="#i-info"/></svg> Limitations for this tool</summary>
+          <ul><li>Text uses a standard font (Helvetica), so it supports English and most Latin letters (like ñ and é), but not emoji or non-Latin scripts.</li><li>Password-protected PDFs aren't supported.</li></ul>
+        </details>
       </section>
 
       <!-- JPG TO PDF -->
@@ -343,10 +608,32 @@
       <section class="seo glass reveal">
         <h2>Why choose <span class="grad-text">MyPDF</span>?</h2>
         <p>MyPDF is a free online PDF toolkit that runs entirely in your web browser. Unlike many other PDF sites, MyPDF never uploads your documents to a server. Converting, merging, splitting and signing all happen on your own computer or phone, so your contracts, invoices and personal files stay private.</p>
+        <h3>How to use each tool</h3>
+        <div class="howto">
+          <div><h4>JPG to PDF</h4><ol><li>Open <b>JPG to PDF</b> and drop your photos or scans in (JPG, PNG, WebP and more).</li><li>Drag the cards to put the pages in order.</li><li>Choose the page size (same as image, A4 or US Letter), orientation and margin.</li><li>Click <b>Convert to PDF</b> and download your file.</li></ol></div>
+          <div><h4>PDF to JPG</h4><ol><li>Open <b>PDF to JPG</b> and drop in a PDF.</li><li>Pick JPG or PNG.</li><li>Choose the quality: Normal, High or Very high. Use High on phones for long documents.</li><li>Download each image, or everything at once as a ZIP file.</li></ol></div>
+          <div><h4>Merge PDF</h4><ol><li>Open <b>Merge</b> and add two or more PDFs.</li><li>Drag the files into the order you want.</li><li>Click <b>Merge PDF</b> to join them into one document.</li><li>Download the combined PDF.</li></ol></div>
+          <div><h4>Split PDF</h4><ol><li>Open <b>Split</b> and drop in a PDF.</li><li>Choose how: every page as its own PDF, one PDF per range, or chosen pages extracted into one PDF.</li><li>Type the pages or ranges, such as <code>1-3, 5, 8-10</code>, and click <b>Split PDF</b>.</li><li>Download the new files one by one or as a ZIP.</li></ol></div>
+          <div><h4>PDF to Word</h4><ol><li>Open <b>PDF to Word</b> and drop in a PDF.</li><li>Choose <b>Editable text</b> to change the words, or <b>Exact look</b> to keep every page as it is.</li><li>Click <b>Convert to Word</b> and open the .docx in Word or Google Docs.</li></ol></div>
+          <div><h4>Word, Excel or PowerPoint to PDF</h4><ol><li>Open the matching tool and drop in your .docx, .xlsx or .pptx file.</li><li>Check the preview. For Excel, pick the sheets, orientation and paper size.</li><li>Click <b>Download PDF</b>, or <b>Print / Save as PDF</b> for selectable text (Word and Excel).</li></ol></div>
+          <div><h4>Organize pages</h4><ol><li>Open <b>Organize pages</b> and drop in a PDF.</li><li>Rotate pages with ↺ ↻, delete with ✕, and drag cards (or use ◀ ▶) to reorder.</li><li>Click <b>Save PDF</b>.</li></ol></div>
+          <div><h4>Compress PDF</h4><ol><li>Open <b>Compress</b> and drop in a PDF.</li><li>Pick Strong, Balanced or Light.</li><li>See how much smaller it got, then download.</li></ol></div>
+          <div><h4>Page numbers &amp; watermark</h4><ol><li>Open the tool and drop in a PDF.</li><li>Choose where the numbers go and their format, and type a watermark if you want one.</li><li>Check the preview, then click <b>Apply &amp; download</b>.</li></ol></div>
+          <div><h4>Sign PDF</h4><ol><li>Open <b>Sign</b> and drop in the PDF you need to sign.</li><li>Draw, type or upload your signature.</li><li>Tap the page where it should go, then resize and move it.</li><li>Download the signed PDF.</li></ol></div>
+        </div>
+        <h3>Good to know</h3>
+        <p><b>Everyday uses.</b> People use MyPDF to turn phone photos of receipts and IDs into one PDF for an application, to pull a single page out of a long contract, to combine scanned forms before emailing them, to sign a lease or an HR form without printing it, to turn a Word résumé into a PDF, to shrink a scan so it fits an email limit, and to stamp page numbers on a report.</p>
+        <p><b>Why "no upload" matters.</b> Most online PDF sites send your file to their server, process it there and send it back. That means a copy of your document sits on someone else's computer, at least for a while. MyPDF does the same work with JavaScript inside your browser tab, so there is no copy anywhere else. You can even switch off your internet after the page loads and the tools keep working.</p>
+        <p><b>Tips for best results.</b> For clear PDFs from photos, shoot in good light and crop the edges first. When splitting, check the page count shown on screen before typing ranges. For very large files, use a laptop or desktop, which has more memory than a phone.</p>
         <h3>Frequently asked questions</h3>
         <details><summary>Is MyPDF really free?</summary><p>Yes. Every tool is free to use with no sign-up and no watermarks.</p></details>
         <details><summary>Are my files safe?</summary><p>Your files never leave your device. All processing happens locally in your browser.</p></details>
         <details><summary>Is the signature legally binding?</summary><p>MyPDF adds a visual signature image to your PDF. This is enough for many everyday documents. Some legal documents require a certified digital signature, so check the requirements for your document.</p></details>
+        <details><summary>Can I convert Word, Excel and PowerPoint files?</summary><p>Yes. MyPDF turns .docx, .xlsx, .xls, .csv and .pptx files into PDF, and turns PDFs into Word (.docx) or plain text. Everything happens in your browser, so even these files are never uploaded. Complex layouts may come out simpler than the original, so check the preview.</p></details>
+        <details><summary>How much smaller does Compress make my PDF?</summary><p>Scans and photo-heavy PDFs often shrink by half or more. PDFs that are mostly text may not get smaller, and MyPDF tells you when that happens so you can keep your original.</p></details>
+        <details><summary>Do I need to install anything?</summary><p>No. MyPDF works in any modern browser on Windows, Mac, Android, iPhone and Linux. There is nothing to download or install.</p></details>
+        <details><summary>Does it work offline?</summary><p>Yes. Once the page has fully loaded, every tool works without an internet connection, because nothing is sent to a server.</p></details>
+        <details><summary>Will my PDF have a watermark?</summary><p>No. MyPDF never adds watermarks, logos or extra pages to your files.</p></details>
         <details><summary>Is there a file size limit?</summary><p>There is no fixed limit, but very large files depend on your device's memory. See <a href="#limits" data-scroll>Known limitations</a>.</p></details>
       </section>
     </div>
@@ -372,6 +659,7 @@
   <script src="lib/three.min.js"></script>
   <script src="config.js"></script>
   <script src="app.js"></script>
+  <script src="tools.js"></script>
   <script src="fx.js"></script>
 <footer class="ui-foot">
   <div class="ui-foot-in">

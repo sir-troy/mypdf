@@ -95,7 +95,8 @@ function route() {
   $$('.nav a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
   document.body.classList.remove('nav-open');
   const titles = { home: 'MyPDF – Free Online PDF Tools', 'jpg-to-pdf': 'JPG to PDF – MyPDF', 'pdf-to-jpg': 'PDF to JPG – MyPDF', merge: 'Merge PDF – MyPDF', split: 'Split PDF – MyPDF', sign: 'Sign PDF – MyPDF' };
-  document.title = titles[id];
+  const h1 = document.getElementById(id).querySelector('h1');
+  document.title = titles[id] || ((h1 ? h1.textContent.trim() : 'PDF tools') + ' – MyPDF');
   window.scrollTo(0, 0);
 }
 window.addEventListener('hashchange', route);
@@ -105,6 +106,7 @@ document.addEventListener('click', e => {
   const go = () => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
   if ($('#home').hidden) { location.hash = '#home'; setTimeout(go, 80); } else go();
 });
+{ const tc = document.getElementById('tool-count'); if (tc) tc.dataset.count = document.querySelectorAll('#tools-grid .tool-card').length; }
 route();
 $('.menu-btn').addEventListener('click', () => document.body.classList.toggle('nav-open'));
 $('#year').textContent = new Date().getFullYear();
@@ -540,4 +542,6 @@ $('#sign-go').onclick = async () => {
   } catch (e) { console.error(e); toast(e.message || 'Could not sign this PDF', true); }
   busy(false);
 };
+/* shared helpers for tools.js */
+window.MYPDF = { $, $$, busy, toast, download, baseName, fmtSize, isPdf, isImg, nextFrame, loadPdfLib, renderPdfPage, setupDrop, makeSortable, track, sumSize, loaderText, parseRanges };
 })();

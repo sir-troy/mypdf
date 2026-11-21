@@ -394,3 +394,52 @@ input[type=color]{width:34px;height:28px;border:1px solid var(--stroke-2);border
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .reveal,.tool-card.reveal:not(.in){opacity:1;transform:none}
 }
+
+/* how-to guide */
+.seo .howto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 22px}
+.seo .howto>div{border:1px solid var(--stroke);border-radius:14px;padding:16px 18px;background:rgba(255,255,255,.02)}
+.seo .howto h4{margin:0 0 8px;font-family:var(--display)}
+.seo .howto ol{margin:0;padding-left:20px;color:var(--muted)}
+.seo .howto li{margin:4px 0;line-height:1.5}
+.seo code{font-family:var(--mono,ui-monospace,monospace);font-size:.92em;padding:1px 6px;border-radius:6px;background:var(--glass-2)}
+
+/* ===== v1.1: grouped tool grid + new tools ===== */
+.tool-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tool-grid .tool-card{padding:22px}
+.tool-grid .tool-card p{font-size:14px}
+.tool-group{grid-column:1/-1;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:14px 0 -4px;display:flex;align-items:center;gap:12px}
+.tool-group::after{content:"";flex:1;height:1px;background:var(--stroke)}
+.tool-group:first-child{margin-top:0}
+.tool-grid .tool-card h3{font-size:21px}
+.tool-note{max-width:760px;margin:-6px auto 0;text-align:center;font-size:14px;color:var(--muted)}
+.tool-note b{color:var(--text);font-weight:600}
+.preview-box{margin:22px 0 0;padding:14px;animation:fadeUp .6s var(--ease) both}
+.preview-label{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px 4px}
+.office-preview{max-height:620px;overflow:auto;background:#e9ecf1;border-radius:12px;padding:14px;color:#000}
+.office-preview section.docx{margin:0 auto 14px!important;box-shadow:0 6px 20px rgba(0,0,0,.18)!important}
+.sheet-preview{background:#fff}
+.slide-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.slide-grid .thumb{height:auto;aspect-ratio:16/9;background:#fff}
+.slide-grid .thumb img{max-height:none;width:100%;height:100%;object-fit:contain}
+.text-out{margin:22px 0 0;padding:14px;animation:fadeUp .6s var(--ease) both}
+.text-out-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.text-out textarea{width:100%;min-height:380px;resize:vertical;font:13.5px/1.6 var(--mono);color:var(--text);background:var(--input);border:1px solid var(--stroke-2);border-radius:12px;padding:14px}
+.org-card{cursor:grab}
+.org-card .thumb img{transition:transform .35s var(--ease)}
+.org-tools{display:flex;justify-content:space-between;gap:4px;margin-top:8px}
+.org-tools button{flex:1;border:1px solid var(--stroke);background:var(--glass-2);color:var(--text);border-radius:9px;padding:6px 0;cursor:pointer;font-size:14px;transition:.2s}
+.org-tools button:hover:not(:disabled){background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border-color:transparent}
+.org-tools button:disabled{opacity:.3;cursor:default}
+.nw-workspace{display:grid;grid-template-columns:330px minmax(0,1fr);gap:18px;margin-top:18px;animation:fadeUp .6s var(--ease) both}
+.nw-workspace .file-pill{display:block;margin-bottom:14px}
+.nw-fields{display:grid;gap:10px;margin:10px 0 4px;transition:opacity .3s}
+.nw-fields.off{opacity:.35;pointer-events:none}
+.nw-fields label:not(.inline){display:flex;flex-direction:column;gap:6px;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nw-fields select,.nw-fields input[type=text],.nw-fields input[type=number]{width:100%;min-width:0}
+input[type=number]{font:500 15px var(--font);color:var(--text);padding:11px 14px;border:1px solid var(--stroke-2);border-radius:12px;background:var(--input)}
+#nw-canvas{display:block;max-width:100%;height:auto}
+.nw-workspace .page-stage{cursor:default}
+@media (max-width:1100px){ .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:900px){ .nw-workspace{grid-template-columns:minmax(0,1fr)} }
+@media (max-width:620px){ .tool-grid{grid-template-columns:minmax(0,1fr)} .slide-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .text-out textarea{min-height:300px} }
+.options label.inline{flex-direction:row;align-items:center;align-self:center;font:500 14px var(--font);text-transform:none;letter-spacing:0;color:var(--text)}

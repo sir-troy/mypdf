@@ -4,14 +4,14 @@ Free, private PDF tools that run in your browser.
 
 **Live:** https://mypdf.useful-indeed.com
 
-myPDF is a set of PDF tools that work entirely on your device. You can turn images into a PDF, turn PDF pages into JPG or PNG images, merge several PDFs into one, split a PDF into parts, and sign a PDF with a drawn, typed or uploaded signature. Every step happens in your browser, so your documents are never uploaded to a server.
+myPDF is a set of PDF tools that work entirely on your device. Convert PDFs to Word or plain text; turn Word, Excel, PowerPoint and image files into PDFs; merge, split, organize, compress and number pages; add a watermark; and sign documents with a drawn, typed or uploaded signature. Every step happens in your browser, so your documents are never uploaded to a server.
 
 ## How to use
 
-1. Pick a tool: JPG to PDF, PDF to JPG, Merge, Split or Sign.
-2. Drop your files in, or tap to choose them from your device.
-3. Adjust the options — page size, order, page ranges, image quality or signature position.
-4. Download the result. For many pages, you can download everything as one ZIP file.
+1. Pick a tool from the grouped list: Convert to PDF, Convert from PDF, Organize, or Edit & sign.
+2. Drop your file in, or tap to choose it from your device.
+3. Adjust the options and check the preview, if the tool shows one.
+4. Download the result. Nothing is uploaded at any step.
 
 ## Privacy
 
