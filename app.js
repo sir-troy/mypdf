@@ -3,6 +3,8 @@
 'use strict';
 const { PDFDocument, rgb, StandardFonts } = PDFLib;
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'lib/pdf.worker.min.js';
+// Start the PDF worker right away, so the PDF tools keep working offline once the page has loaded.
+try { pdfjsLib.GlobalWorkerOptions.workerPort = new Worker('lib/pdf.worker.min.js'); } catch (e) {}
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const CFG = window.MYPDF_CONFIG || {};
